@@ -1,0 +1,46 @@
+<p>{{cribdata|json}}</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>My cart</h4>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of cribInCarts">
+        <td> <b>Item :</b>
+          {{c.type}}
+          {{c.price|currency}}</td>
+                    <!-- 
+        <td [innerText]='c.quantity'> </td>
+        -->
+		<td>
+          <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" (click)="minusItem(c)" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+          </span>
+              <input type="text" [(ngModel)]='c.quantity' class="form-control input-number">
+
+              <span class="input-group-btn">
+              <button type="button" (click)="PlusItem(c)"class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+          </span>
+            </div>
+
+        </td>
+
+        <td><button class="btn btn-sm btn-danger" (click)="deleteItem(c)">Delete Item</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,19 @@
+
+
+#button {
+  position: relative;
+  left:70px;
+  display: inline-block;
+}
+
+/*#inputBox, #inputBoxOne {
+  width: 40px;
+  height: 25px;
+
+}*/
+
+
+.wrapper{
+  display: inline-block;
+}
+
